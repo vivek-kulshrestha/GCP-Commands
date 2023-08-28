@@ -1,0 +1,4 @@
+gcloud projects get-iam-policy <YOUR GCLOUD PROJECT>  \
+--flatten="bindings[].members" \
+--format='table(bindings.role)' \
+--filter="bindings.members:<YOUR SERVICE ACCOUNT>"
